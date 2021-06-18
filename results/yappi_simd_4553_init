@@ -1,0 +1,47 @@
+
+Clock type: CPU
+Ordered by: totaltime, desc
+
+name                                  ncall  tsub      ttot      tavg      
+..rp.py:282 RBFInterpolator.__init__  10     0.150707  11.13199  1.113199
+..terp.py:80 _build_and_solve_system  10     7.189892  10.97888  1.097888
+..e._rbfinterp_pythran._build_system  10     3.788985  3.788985  0.378898
+..rp.py:390 RBFInterpolator.__call__  10     0.000129  0.544010  0.054401
+..olate._rbfinterp_pythran._evaluate  10     0.536362  0.536362  0.053636
+..dex_tricks.py:674 ndindex.__next__  16010  0.023647  0.034887  0.000002
+builtins.next                         16010  0.000000  0.011241  0.000001
+../numpy/core/_asarray.py:23 asarray  40     0.000124  0.008550  0.000214
+numpy.array                           50     0.008437  0.008437  0.000169
+..dex_tricks.py:647 ndindex.__init__  10     0.000137  0.000809  0.000081
+..ray_umath.implement_array_function  50/30  0.000334  0.000604  0.000012
+..ges/numpy/core/numeric.py:288 full  10     0.000097  0.000445  0.000045
+../_rbfinterp.py:48 _monomial_powers  10     0.000275  0.000397  0.000040
+..function__ internals>:2 zeros_like  10     0.000037  0.000332  0.000033
+..ray_function__ internals>:2 copyto  20     0.000124  0.000326  0.000016
+..lib/stride_tricks.py:38 as_strided  10     0.000182  0.000295  0.000030
+..nction__ internals>:2 iscomplexobj  10     0.000088  0.000281  0.000028
+..umpy/core/numeric.py:75 zeros_like  10     0.000056  0.000246  0.000025
+..lib/type_check.py:279 iscomplexobj  10     0.000085  0.000108  0.000011
+..function__ internals>:2 empty_like  10     0.000038  0.000101  0.000010
+numpy.empty                           10     0.000092  0.000092  0.000009
+..shape' of 'numpy.ndarray' objects>  30     0.000092  0.000092  0.000003
+..umpy/core/numeric.py:1865 isscalar  10     0.000062  0.000088  0.000009
+numpy.zeros                           30     0.000087  0.000087  0.000003
+..'view' of 'numpy.ndarray' objects>  20     0.000083  0.000083  0.000004
+../scipy/special/_basic.py:2170 comb  10     0.000041  0.000083  0.000008
+scipy.special._comb._comb_int         10     0.000042  0.000042  0.000004
+builtins.max                          10     0.000038  0.000038  0.000004
+builtins.isinstance                   20     0.000033  0.000033  0.000002
+..mpy/core/multiarray.py:1054 copyto  20     0.000029  0.000029  0.000001
+builtins.issubclass                   10     0.000022  0.000022  0.000002
+...<method 'lower' of 'str' objects>  10     0.000022  0.000022  0.000002
+.._.<method 'get' of 'dict' objects>  10     0.000021  0.000021  0.000002
+..e_check.py:206 _is_type_dispatcher  10     0.000019  0.000019  0.000002
+..e_tricks.py:20 DummyArray.__init__  10     0.000013  0.000013  0.000001
+..icks.py:25 _maybe_view_as_subclass  10     0.000010  0.000010  0.000001
+..meric.py:71 _zeros_like_dispatcher  10     0.000009  0.000009  0.000001
+builtins.len                          10     0.000008  0.000008  0.000001
+..y/core/multiarray.py:75 empty_like  10     0.000008  0.000008  0.000001
+..dex_tricks.py:655 ndindex.__iter__  10     0.000008  0.000008  0.000001
+.. _GeneratorContextManager.__exit__  1      0.000000  0.000000  0.000000
+Memory Usage: 140408
