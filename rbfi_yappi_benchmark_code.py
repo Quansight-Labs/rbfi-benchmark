@@ -1,13 +1,13 @@
 import numpy as np
 import pythran, yappi
-import scipy
+import scipy, sys
 from scipy.interpolate import RBFInterpolator
 np.random.seed(0)
 
 print("Pythran Version: ", pythran.__version__)
 print("Scipy Version: ", scipy.__version__)
 print("NumPy Version: ", np.__version__)
-
+flags = '_'.join(sys.argv[1:])
 repeat_freq = 10
 num_points = [10, 20, 40, 80, 100]
 for num in num_points:
@@ -25,7 +25,11 @@ for num in num_points:
     values = image[valid_mask]
     
     print(coords.shape, values.shape)
-    file = open('results/yappi_' + str(coords.shape[0]) + '_init', 'w')
+    if len(flags) > 0:
+        file_name_prefix = 'results/yappi_' + flags + '_'
+    else:
+        file_name_prefix = 'results/yappi_'
+    file = open(file_name_prefix + str(coords.shape[0]) + '_init', 'w')
     with yappi.run(builtins=True):
         for _ in range(repeat_freq):
             it = RBFInterpolator(coords, values)
@@ -34,7 +38,7 @@ for num in num_points:
     file.close()
     yappi.clear_stats()
 
-    file = open('results/yappi_' + str(coords.shape[0]) + '_evaluate', 'w')
+    file = open(file_name_prefix + str(coords.shape[0]) + '_evaluate', 'w')
     with yappi.run(builtins=True):
         for _ in range(repeat_freq):
             filled = it(list(np.ndindex(image.shape))).reshape(image.shape)

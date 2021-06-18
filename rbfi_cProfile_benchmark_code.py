@@ -1,13 +1,13 @@
 import numpy as np
 import pythran, cProfile
-import scipy
+import scipy, sys
 from scipy.interpolate import RBFInterpolator
 np.random.seed(0)
 
 print("Pythran Version: ", pythran.__version__)
 print("Scipy Version: ", scipy.__version__)
 print("NumPy Version: ", np.__version__)
-
+flags = '_'.join(sys.argv[1:])
 repeat_freq = 10
 num_points = [10, 20, 40, 80, 100]
 for num in num_points:
@@ -29,14 +29,18 @@ for num in num_points:
     for _ in range(repeat_freq):
         it = RBFInterpolator(coords, values)
     pr_init.disable()
-    pr_init.dump_stats('results/cProfile_' + str(coords.shape[0]) + '_init')
+    if len(flags) > 0:
+        file_name_prefix = 'results/cProfile_' + flags + '_'
+    else:
+        file_name_prefix = 'results/cProfile_'
+    pr_init.dump_stats(file_name_prefix + str(coords.shape[0]) + '_init')
 
     pr_init = cProfile.Profile()
     pr_init.enable()
     for _ in range(repeat_freq):
         filled = it(list(np.ndindex(image.shape))).reshape(image.shape)
     pr_init.disable()
-    pr_init.dump_stats('results/cProfile_' + str(coords.shape[0]) + '_evaluate')
+    pr_init.dump_stats(file_name_prefix + str(coords.shape[0]) + '_evaluate')
 
     del x, y, image, it, filled
 
