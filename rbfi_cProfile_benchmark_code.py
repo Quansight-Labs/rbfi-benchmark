@@ -8,8 +8,8 @@ print("Pythran Version: ", pythran.__version__)
 print("Scipy Version: ", scipy.__version__)
 print("NumPy Version: ", np.__version__)
 flags = '_'.join(sys.argv[1:])
-repeat_freq = 10
-num_points = [10, 20, 40, 80, 100]
+repeat_freq = 20
+num_points = [80, 100]
 for num in num_points:
     x = np.linspace(0, 1, num)
     y = x[:, None]
