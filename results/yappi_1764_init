@@ -1,0 +1,33 @@
+
+Clock type: CPU
+Ordered by: totaltime, desc
+
+name                                  ncall  tsub      ttot      tavg      
+..rp.py:282 RBFInterpolator.__init__  10     0.002653  1.593163  0.159316
+..terp.py:80 _build_and_solve_system  10     0.774015  1.588478  0.158848
+..e._rbfinterp_pythran._build_system  10     0.814464  0.814464  0.081446
+../numpy/core/_asarray.py:23 asarray  20     0.000081  0.000671  0.000034
+numpy.array                           20     0.000590  0.000590  0.000030
+../_rbfinterp.py:48 _monomial_powers  10     0.000311  0.000422  0.000042
+..ges/numpy/core/numeric.py:288 full  10     0.000097  0.000391  0.000039
+..ray_umath.implement_array_function  20     0.000184  0.000284  0.000014
+..nction__ internals>:2 iscomplexobj  10     0.000081  0.000261  0.000026
+..ray_function__ internals>:2 copyto  10     0.000078  0.000220  0.000022
+..lib/type_check.py:279 iscomplexobj  10     0.000078  0.000101  0.000010
+..umpy/core/numeric.py:1865 isscalar  10     0.000063  0.000088  0.000009
+numpy.empty                           10     0.000074  0.000074  0.000007
+../scipy/special/_basic.py:2170 comb  10     0.000041  0.000069  0.000007
+..shape' of 'numpy.ndarray' objects>  10     0.000063  0.000063  0.000006
+..'view' of 'numpy.ndarray' objects>  10     0.000060  0.000060  0.000006
+numpy.zeros                           10     0.000042  0.000042  0.000004
+builtins.max                          10     0.000033  0.000033  0.000003
+scipy.special._comb._comb_int         10     0.000028  0.000028  0.000003
+builtins.isinstance                   10     0.000024  0.000024  0.000002
+...<method 'lower' of 'str' objects>  10     0.000024  0.000024  0.000002
+builtins.issubclass                   10     0.000023  0.000023  0.000002
+..mpy/core/multiarray.py:1054 copyto  10     0.000020  0.000020  0.000002
+.._.<method 'get' of 'dict' objects>  10     0.000019  0.000019  0.000002
+..e_check.py:206 _is_type_dispatcher  10     0.000019  0.000019  0.000002
+builtins.next                         1      0.000000  0.000000  0.000000
+.. _GeneratorContextManager.__exit__  1      0.000000  0.000000  0.000000
+Memory Usage: 137592

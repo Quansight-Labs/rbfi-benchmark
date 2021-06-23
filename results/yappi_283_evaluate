@@ -3,29 +3,29 @@ Clock type: CPU
 Ordered by: totaltime, desc
 
 name                                  ncall  tsub      ttot      tavg      
-..rp.py:390 RBFInterpolator.__call__  10     0.000124  0.062658  0.006266
-..olate._rbfinterp_pythran._evaluate  10     0.058731  0.058731  0.005873
-..dex_tricks.py:674 ndindex.__next__  4010   0.009339  0.013688  0.000003
-builtins.next                         4010   0.004349  0.004349  0.000001
-../numpy/core/_asarray.py:23 asarray  20     0.000052  0.003856  0.000193
-numpy.array                           30     0.003822  0.003822  0.000127
-..dex_tricks.py:647 ndindex.__init__  10     0.000168  0.001026  0.000103
-..function__ internals>:2 zeros_like  10     0.000049  0.000422  0.000042
-..lib/stride_tricks.py:38 as_strided  10     0.000223  0.000379  0.000038
-..ray_umath.implement_array_function  30/10  0.000135  0.000361  0.000012
-..umpy/core/numeric.py:75 zeros_like  10     0.000077  0.000326  0.000033
-..function__ internals>:2 empty_like  10     0.000051  0.000126  0.000013
-..ray_function__ internals>:2 copyto  10     0.000045  0.000091  0.000009
+..rp.py:390 RBFInterpolator.__call__  10     0.000139  0.063750  0.006375
+..olate._rbfinterp_pythran._evaluate  10     0.059865  0.059865  0.005986
+..dex_tricks.py:674 ndindex.__next__  4010   0.009268  0.013769  0.000003
+builtins.next                         4010   0.004501  0.004501  0.000001
+../numpy/core/_asarray.py:23 asarray  20     0.000053  0.003796  0.000190
+numpy.array                           30     0.003761  0.003761  0.000125
+..dex_tricks.py:647 ndindex.__init__  10     0.000178  0.001097  0.000110
+..function__ internals>:2 zeros_like  10     0.000051  0.000462  0.000046
+..lib/stride_tricks.py:38 as_strided  10     0.000236  0.000399  0.000040
+..ray_umath.implement_array_function  30/10  0.000147  0.000399  0.000013
+..umpy/core/numeric.py:75 zeros_like  10     0.000082  0.000362  0.000036
+..function__ internals>:2 empty_like  10     0.000057  0.000138  0.000014
+..ray_function__ internals>:2 copyto  10     0.000054  0.000112  0.000011
 numpy.zeros                           20     0.000065  0.000065  0.000003
-..shape' of 'numpy.ndarray' objects>  20     0.000040  0.000040  0.000002
-..'view' of 'numpy.ndarray' objects>  10     0.000029  0.000029  0.000003
-..e_tricks.py:20 DummyArray.__init__  10     0.000017  0.000017  0.000002
-..icks.py:25 _maybe_view_as_subclass  10     0.000015  0.000015  0.000001
-..mpy/core/multiarray.py:1054 copyto  10     0.000012  0.000012  0.000001
+..shape' of 'numpy.ndarray' objects>  20     0.000044  0.000044  0.000002
+..'view' of 'numpy.ndarray' objects>  10     0.000034  0.000034  0.000003
+..e_tricks.py:20 DummyArray.__init__  10     0.000018  0.000018  0.000002
+..icks.py:25 _maybe_view_as_subclass  10     0.000017  0.000017  0.000002
+..mpy/core/multiarray.py:1054 copyto  10     0.000016  0.000016  0.000002
 ..meric.py:71 _zeros_like_dispatcher  10     0.000012  0.000012  0.000001
+..y/core/multiarray.py:75 empty_like  10     0.000012  0.000012  0.000001
 builtins.len                          10     0.000012  0.000012  0.000001
 builtins.isinstance                   10     0.000012  0.000012  0.000001
 ..dex_tricks.py:655 ndindex.__iter__  10     0.000011  0.000011  0.000001
-..y/core/multiarray.py:75 empty_like  10     0.000011  0.000011  0.000001
 .. _GeneratorContextManager.__exit__  1      0.000000  0.000000  0.000000
 Memory Usage: 137464
